@@ -154,7 +154,7 @@ class CorefModel(object):
     speaker_ids = np.array([speaker_dict[s] for s in speakers])
 
     doc_key = example["doc_key"]
-    genre = self.genres[doc_key[:2]]
+    genre = self.genres["nw"]
 
     gold_starts, gold_ends = self.tensorize_mentions(gold_mentions)
 
